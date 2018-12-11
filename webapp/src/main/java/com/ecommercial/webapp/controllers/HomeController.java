@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
-    @RequestMapping("/login")
+    @RequestMapping("/")
     public String home(){
         return "index";
     }
