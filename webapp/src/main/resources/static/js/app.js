@@ -48,7 +48,7 @@ app.run(function ($state, $timeout, $stateParams, authenticationService, localSt
     //console.log($rootScope.globals);
     $timeout(function () {
         $rootScope.isLogIn = true;
-        $state.go('home');
+        $state.go('login');
     });
 
 });
