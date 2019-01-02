@@ -13,6 +13,6 @@ authenticationModule.config(
         var port = window.location.port;
         var rootUrl = 'http://' + hostname + ':' + port;
 
-        $urlRouterProvider.otherwise('/loginApp');
+        $urlRouterProvider.otherwise('/login');
        
     }]);

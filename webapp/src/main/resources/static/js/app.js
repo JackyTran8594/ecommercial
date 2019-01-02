@@ -1,6 +1,6 @@
 //main module
-var app = angular.module('myApp', ['ui.bootstrap', 'ui.bootstrap.tpls', 'ui.bootstrap.modal', 'ui.router', 'ngAnimate', 'ngResource'
-    , 'ngServices', 'sysModule', 'LocalStorageModule', 'authenticationModule', 'clientModule', 'webcam'
+var app = angular.module('rootApp', ['ui.bootstrap', 'ui.bootstrap.tpls', 'ui.bootstrap.modal', 'ui.router', 'ngAnimate', 'ngResource'
+    , 'ngServices', 'sysModule', 'LocalStorageModule', 'authenticationModule', 'clientModule', 'registerStateModule'
 ]);
 
 //main config
@@ -18,25 +18,15 @@ app.config(
             //$urlRouterProvider.otherwise('/home');
 
             $stateProvider.state('home', {
-                url: '/home',
-                templateUrl: rootUrl + '/app/views/othersview/dashboard.html',
-                controller: 'homeController',
-                resolve: {
-                    isLogIn: function () {
-                        return true;
-                    }
+                views:{
+
                 }
             });
 
             $stateProvider.state('login', {
-                url: '/login',
-                templateUrl: rootUrl + '/app/views/login/login.html',
-                controller: 'logInController',
-                resolve: {
-                    isLogIn: function () {
-                        return false;
-                    }
-                }
+               views:{
+                   
+               }
             });
         }
     ]);
